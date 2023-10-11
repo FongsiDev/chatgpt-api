@@ -78,61 +78,36 @@ export class ChatGPTUnofficialProxyAPI {
     const body: types.DeleteConversationJSONBody = {
       is_visible: true
     }
-    const result: types.DeleteMessage = {
-      detail: '',
-      success: ''
-    }
+    let result = null
 
-    const responseP = new Promise<types.DeleteConversation>(
-      (resolve, reject) => {
-        const url = this._apiReverseProxyUrl + "/" + id
-        const headers = {
-          ...this._headers,
-          Authorization: `Bearer ${this._accessToken}`,
-          Accept: 'text/event-stream',
-          'Content-Type': 'application/json'
-        }
+    const responseP = new Promise((resolve, reject) => {
+      const url = this._apiReverseProxyUrl + '/' + id
+      const headers = {
+        ...this._headers,
+        Authorization: `Bearer ${this._accessToken}`,
+        Accept: 'text/event-stream',
+        'Content-Type': 'application/json'
+      }
 
-        if (this._debug) {
-          console.log('PATCH', url, { body, headers })
-        }
+      if (this._debug) {
+        console.log('PATCH', url, { body, headers })
+      }
 
-        fetchSSE(
-          url,
-          {
-            method: 'PATCH',
-            headers,
-            body: JSON.stringify(body),
-            onMessage: (data: string) => {
-              if (this._debug) {
-               console.log('Data Patch', url, { body, headers, data })
-              }
-              if (data) {
-                return resolve(result)
-              }
-              try {
-                const convoResponseEvent: types.DeleteConversationResponseEvent =
-                  JSON.parse(data)
-                if (convoResponseEvent.detail) {
-                  result.detail = convoResponseEvent.detail
-                }
-
-                if (convoResponseEvent.success) {
-                  result.success = convoResponseEvent.success
-                }
-              } catch (err) {
-                if (this._debug) {
-                  console.warn('chatgpt unexpected JSON error', err)
-                }
-                // reject(err)
-              }
-            },
-            onError: (err) => {
-              reject(err)
-            }
-          },
-          this._fetch
-        ).catch((err) => {
+      fetch(url, {
+        method: 'PATCH',
+        headers,
+        body: JSON.stringify(body)
+      })
+        .then((data) => {
+          if (this._debug) {
+            console.log('Data Patch', url, { body, headers, data })
+          }
+          if (data) {
+            result = data
+            return resolve(data)
+          }
+        })
+        .catch((err) => {
           const errMessageL = err.toString().toLowerCase()
 
           if (
@@ -148,8 +123,7 @@ export class ChatGPTUnofficialProxyAPI {
             return reject(err)
           }
         })
-      }
-    )
+    })
 
     return responseP
   }
