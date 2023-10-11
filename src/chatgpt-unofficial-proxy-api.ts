@@ -78,6 +78,10 @@ export class ChatGPTUnofficialProxyAPI {
     const body: types.DeleteConversationJSONBody = {
       is_visible: true
     }
+    const result: types.DeleteMessage = {
+      detail: '',
+      success: ''
+    }
 
     const responseP = new Promise<types.DeleteConversation>(
       (resolve, reject) => {
@@ -101,7 +105,23 @@ export class ChatGPTUnofficialProxyAPI {
             body: JSON.stringify(body),
             onMessage: (data: string) => {
               if (data) {
-                return resolve(data)
+                return resolve(result)
+              }
+              try {
+                const convoResponseEvent: types.DeleteConversationResponseEvent =
+                  JSON.parse(data)
+                if (convoResponseEvent.detail) {
+                  result.detail = convoResponseEvent.detail
+                }
+
+                if (convoResponseEvent.success) {
+                  result.success = convoResponseEvent.success
+                }
+              } catch (err) {
+                if (this._debug) {
+                  console.warn('chatgpt unexpected JSON error', err)
+                }
+                // reject(err)
               }
             },
             onError: (err) => {
@@ -113,9 +133,8 @@ export class ChatGPTUnofficialProxyAPI {
           const errMessageL = err.toString().toLowerCase()
 
           if (
-            result.text &&
-            (errMessageL === 'error: typeerror: terminated' ||
-              errMessageL === 'typeerror: terminated')
+            errMessageL === 'error: typeerror: terminated' ||
+            errMessageL === 'typeerror: terminated'
           ) {
             // OpenAI sometimes forcefully terminates the socket from their end before
             // the HTTP request has resolved cleanly. In my testing, these cases tend to

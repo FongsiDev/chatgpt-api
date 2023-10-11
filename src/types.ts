@@ -51,10 +51,8 @@ export type SendMessageOptions = {
 }
 
 export interface DeleteConversation {
-  success?: boolean
-  detail?:
-    | openai.CreateChatCompletionResponse
-    | CreateChatCompletionStreamResponse
+  success?: string
+  detail?: string
 }
 
 export type MessageActionType = 'next' | 'variant'
@@ -67,6 +65,11 @@ export type SendMessageBrowserOptions = {
   timeoutMs?: number
   onProgress?: (partialResponse: ChatMessage) => void
   abortSignal?: AbortSignal
+}
+
+export interface DeleteMessage {
+  success?: string
+  detail?: string
 }
 
 export interface ChatMessage {
@@ -178,6 +181,11 @@ export type ConversationResponseEvent = {
   message?: Message
   conversation_id?: string
   error?: string | null
+}
+
+export type DeleteConversationResponseEvent = {
+  detail?: string
+  success?: string
 }
 
 export type Message = {
