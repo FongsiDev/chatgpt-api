@@ -101,7 +101,7 @@ export class ChatGPTUnofficialProxyAPI {
             body: JSON.stringify(body),
             onMessage: (data: string) => {
               if (data) {
-                return resolve(result)
+                return resolve(data)
               }
             },
             onError: (err) => {
