@@ -31,7 +31,7 @@ ChatCompletionResponseMessage
 
 [src/types.ts:259](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L259)
 
-___
+---
 
 ### role
 

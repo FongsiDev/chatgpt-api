@@ -29,8 +29,8 @@
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type     |
+| :--------- | :------- |
 | `message?` | `string` |
 
 #### Inherited from
@@ -45,9 +45,9 @@ node_modules/.pnpm/typescript@5.0.4/node_modules/typescript/lib/lib.es5.d.ts:106
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `message?` | `string` |
+| Name       | Type           |
+| :--------- | :------------- |
+| `message?` | `string`       |
 | `options?` | `ErrorOptions` |
 
 #### Inherited from
@@ -68,7 +68,7 @@ node_modules/.pnpm/typescript@5.0.4/node_modules/typescript/lib/lib.es2022.error
 
 [src/types.ts:86](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L86)
 
-___
+---
 
 ### isFinal
 
@@ -78,7 +78,7 @@ ___
 
 [src/types.ts:85](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L85)
 
-___
+---
 
 ### statusCode
 
@@ -88,7 +88,7 @@ ___
 
 [src/types.ts:83](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L83)
 
-___
+---
 
 ### statusText
 

@@ -37,7 +37,7 @@
 
 [src/types.ts:240](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L240)
 
-___
+---
 
 ### ChatCompletionResponseMessageRoleEnum
 
@@ -49,7 +49,7 @@ ___
 
 [src/types.ts:266](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L266)
 
-___
+---
 
 ### CreateChatCompletionRequestStop
 
@@ -69,11 +69,11 @@ ___
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `Assistant` | ``"assistant"`` |
-| `System` | ``"system"`` |
-| `User` | ``"user"`` |
+| Name        | Type          |
+| :---------- | :------------ |
+| `Assistant` | `"assistant"` |
+| `System`    | `"system"`    |
+| `User`      | `"user"`      |
 
 #### Defined in
 
@@ -81,7 +81,7 @@ ___
 
 [src/types.ts:240](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L240)
 
-___
+---
 
 ### ChatCompletionResponseMessageRoleEnum
 
@@ -89,11 +89,11 @@ ___
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `Assistant` | ``"assistant"`` |
-| `System` | ``"system"`` |
-| `User` | ``"user"`` |
+| Name        | Type          |
+| :---------- | :------------ |
+| `Assistant` | `"assistant"` |
+| `System`    | `"system"`    |
+| `User`      | `"user"`      |
 
 #### Defined in
 

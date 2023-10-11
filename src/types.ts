@@ -50,12 +50,12 @@ export type SendMessageOptions = {
   >
 }
 
-export interface DeleteConversation = {
+export interface DeleteConversation {
   success?: boolean
   detail?:
     | openai.CreateChatCompletionResponse
     | CreateChatCompletionStreamResponse
-} 
+}
 
 export type MessageActionType = 'next' | 'variant'
 

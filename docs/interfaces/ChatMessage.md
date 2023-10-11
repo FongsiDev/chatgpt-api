@@ -25,7 +25,7 @@
 
 [src/types.ts:79](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L79)
 
-___
+---
 
 ### delta
 
@@ -35,7 +35,7 @@ ___
 
 [src/types.ts:70](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L70)
 
-___
+---
 
 ### detail
 
@@ -45,7 +45,7 @@ ___
 
 [src/types.ts:71](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L71)
 
-___
+---
 
 ### id
 
@@ -55,7 +55,7 @@ ___
 
 [src/types.ts:66](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L66)
 
-___
+---
 
 ### name
 
@@ -65,7 +65,7 @@ ___
 
 [src/types.ts:69](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L69)
 
-___
+---
 
 ### parentMessageId
 
@@ -75,7 +75,7 @@ ___
 
 [src/types.ts:76](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L76)
 
-___
+---
 
 ### role
 
@@ -85,7 +85,7 @@ ___
 
 [src/types.ts:68](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L68)
 
-___
+---
 
 ### text
 

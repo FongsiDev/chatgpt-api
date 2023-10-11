@@ -24,15 +24,15 @@
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | `Object` | - |
-| `opts.accessToken` | `string` | - |
-| `opts.apiReverseProxyUrl?` | `string` | **`Default Value`** `https://bypass.duti.tech/api/conversation` * |
-| `opts.debug?` | `boolean` | **`Default Value`** `false` * |
-| `opts.fetch?` | (`input`: `RequestInfo` \| `URL`, `init?`: `RequestInit`) => `Promise`<`Response`\> | - |
-| `opts.headers?` | `Record`<`string`, `string`\> | **`Default Value`** `undefined` * |
-| `opts.model?` | `string` | **`Default Value`** `text-davinci-002-render-sha` * |
+| Name                       | Type                                                                                | Description                                                        |
+| :------------------------- | :---------------------------------------------------------------------------------- | :----------------------------------------------------------------- |
+| `opts`                     | `Object`                                                                            | -                                                                  |
+| `opts.accessToken`         | `string`                                                                            | -                                                                  |
+| `opts.apiReverseProxyUrl?` | `string`                                                                            | **`Default Value`** `https://bypass.duti.tech/api/conversation` \* |
+| `opts.debug?`              | `boolean`                                                                           | **`Default Value`** `false` \*                                     |
+| `opts.fetch?`              | (`input`: `RequestInfo` \| `URL`, `init?`: `RequestInit`) => `Promise`<`Response`\> | -                                                                  |
+| `opts.headers?`            | `Record`<`string`, `string`\>                                                       | **`Default Value`** `undefined` \*                                 |
+| `opts.model?`              | `string`                                                                            | **`Default Value`** `text-davinci-002-render-sha` \*               |
 
 #### Defined in
 
@@ -56,8 +56,8 @@
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type     |
+| :------ | :------- |
 | `value` | `string` |
 
 #### Returns
@@ -88,9 +88,9 @@ Set `debug: true` in the `ChatGPTAPI` constructor to log more info on the full p
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `text` | `string` |
+| Name   | Type                                                                   |
+| :----- | :--------------------------------------------------------------------- |
+| `text` | `string`                                                               |
 | `opts` | [`SendMessageBrowserOptions`](../modules.md#sendmessagebrowseroptions) |
 
 #### Returns

@@ -23,7 +23,7 @@
 
 ### choices
 
-• **choices**: [{ `delta`: { `content?`: `string` ; `role`: [`Role`](../modules.md#role)  } ; `finish_reason`: `string` ; `index`: `number`  }]
+• **choices**: [{ `delta`: { `content?`: `string` ; `role`: [`Role`](../modules.md#role) } ; `finish_reason`: `string` ; `index`: `number` }]
 
 #### Inherited from
 
@@ -33,7 +33,7 @@
 
 [src/types.ts:198](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L198)
 
-___
+---
 
 ### created
 
@@ -47,7 +47,7 @@ ___
 
 [src/types.ts:196](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L196)
 
-___
+---
 
 ### id
 
@@ -61,7 +61,7 @@ ___
 
 [src/types.ts:194](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L194)
 
-___
+---
 
 ### model
 
@@ -75,11 +75,11 @@ ___
 
 [src/types.ts:197](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L197)
 
-___
+---
 
 ### object
 
-• **object**: ``"chat.completion.chunk"``
+• **object**: `"chat.completion.chunk"`
 
 #### Inherited from
 
@@ -89,7 +89,7 @@ ___
 
 [src/types.ts:195](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L195)
 
-___
+---
 
 ### usage
 

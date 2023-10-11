@@ -18,15 +18,15 @@ CreateCompletionResponseUsage
 
 ### Properties
 
-- [completion\_tokens](openai.CreateCompletionResponseUsage.md#completion_tokens)
-- [prompt\_tokens](openai.CreateCompletionResponseUsage.md#prompt_tokens)
-- [total\_tokens](openai.CreateCompletionResponseUsage.md#total_tokens)
+- [completion_tokens](openai.CreateCompletionResponseUsage.md#completion_tokens)
+- [prompt_tokens](openai.CreateCompletionResponseUsage.md#prompt_tokens)
+- [total_tokens](openai.CreateCompletionResponseUsage.md#total_tokens)
 
 ## Properties
 
-### completion\_tokens
+### completion_tokens
 
-• **completion\_tokens**: `number`
+• **completion_tokens**: `number`
 
 **`Memberof`**
 
@@ -36,11 +36,11 @@ CreateCompletionResponseUsage
 
 [src/types.ts:438](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L438)
 
-___
+---
 
-### prompt\_tokens
+### prompt_tokens
 
-• **prompt\_tokens**: `number`
+• **prompt_tokens**: `number`
 
 **`Memberof`**
 
@@ -50,11 +50,11 @@ CreateCompletionResponseUsage
 
 [src/types.ts:432](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L432)
 
-___
+---
 
-### total\_tokens
+### total_tokens
 
-• **total\_tokens**: `number`
+• **total_tokens**: `number`
 
 **`Memberof`**
 

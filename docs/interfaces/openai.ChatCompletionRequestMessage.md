@@ -32,7 +32,7 @@ ChatCompletionRequestMessage
 
 [src/types.ts:227](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L227)
 
-___
+---
 
 ### name
 
@@ -48,7 +48,7 @@ ChatCompletionRequestMessage
 
 [src/types.ts:233](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L233)
 
-___
+---
 
 ### role
 

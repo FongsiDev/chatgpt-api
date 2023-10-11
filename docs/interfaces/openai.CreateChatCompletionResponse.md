@@ -33,7 +33,7 @@ CreateChatCompletionResponse
 
 [src/types.ts:388](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L388)
 
-___
+---
 
 ### created
 
@@ -47,7 +47,7 @@ CreateChatCompletionResponse
 
 [src/types.ts:376](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L376)
 
-___
+---
 
 ### id
 
@@ -61,7 +61,7 @@ CreateChatCompletionResponse
 
 [src/types.ts:364](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L364)
 
-___
+---
 
 ### model
 
@@ -75,7 +75,7 @@ CreateChatCompletionResponse
 
 [src/types.ts:382](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L382)
 
-___
+---
 
 ### object
 
@@ -89,7 +89,7 @@ CreateChatCompletionResponse
 
 [src/types.ts:370](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L370)
 
-___
+---
 
 ### usage
 

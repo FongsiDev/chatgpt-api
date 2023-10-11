@@ -27,8 +27,8 @@ Creates a new client wrapper around OpenAI's chat completion API, mimicing the o
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type                                                   |
+| :----- | :----------------------------------------------------- |
 | `opts` | [`ChatGPTAPIOptions`](../modules.md#chatgptapioptions) |
 
 #### Defined in
@@ -53,8 +53,8 @@ Creates a new client wrapper around OpenAI's chat completion API, mimicing the o
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type     |
+| :------- | :------- |
 | `apiKey` | `string` |
 
 #### Returns
@@ -65,7 +65,7 @@ Creates a new client wrapper around OpenAI's chat completion API, mimicing the o
 
 [src/chatgpt-api.ts:349](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/chatgpt-api.ts#L349)
 
-___
+---
 
 ### apiOrg
 
@@ -83,8 +83,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type     |
+| :------- | :------- |
 | `apiOrg` | `string` |
 
 #### Returns
@@ -112,9 +112,9 @@ Set `debug: true` in the `ChatGPTAPI` constructor to log more info on the full p
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `text` | `string` |
+| Name   | Type                                                     |
+| :----- | :------------------------------------------------------- |
+| `text` | `string`                                                 |
 | `opts` | [`SendMessageOptions`](../modules.md#sendmessageoptions) |
 
 #### Returns

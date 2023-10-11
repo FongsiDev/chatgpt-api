@@ -12,15 +12,15 @@ CreateChatCompletionResponseChoicesInner
 
 ### Properties
 
-- [finish\_reason](openai.CreateChatCompletionResponseChoicesInner.md#finish_reason)
+- [finish_reason](openai.CreateChatCompletionResponseChoicesInner.md#finish_reason)
 - [index](openai.CreateChatCompletionResponseChoicesInner.md#index)
 - [message](openai.CreateChatCompletionResponseChoicesInner.md#message)
 
 ## Properties
 
-### finish\_reason
+### finish_reason
 
-• `Optional` **finish\_reason**: `string`
+• `Optional` **finish_reason**: `string`
 
 **`Memberof`**
 
@@ -30,7 +30,7 @@ CreateChatCompletionResponseChoicesInner
 
 [src/types.ts:419](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L419)
 
-___
+---
 
 ### index
 
@@ -44,7 +44,7 @@ CreateChatCompletionResponseChoicesInner
 
 [src/types.ts:407](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L407)
 
-___
+---
 
 ### message
 

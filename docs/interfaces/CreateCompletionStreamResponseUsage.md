@@ -16,16 +16,16 @@ CreateCompletionResponseUsage
 
 ### Properties
 
-- [completion\_tokens](CreateCompletionStreamResponseUsage.md#completion_tokens)
+- [completion_tokens](CreateCompletionStreamResponseUsage.md#completion_tokens)
 - [estimated](CreateCompletionStreamResponseUsage.md#estimated)
-- [prompt\_tokens](CreateCompletionStreamResponseUsage.md#prompt_tokens)
-- [total\_tokens](CreateCompletionStreamResponseUsage.md#total_tokens)
+- [prompt_tokens](CreateCompletionStreamResponseUsage.md#prompt_tokens)
+- [total_tokens](CreateCompletionStreamResponseUsage.md#total_tokens)
 
 ## Properties
 
-### completion\_tokens
+### completion_tokens
 
-• **completion\_tokens**: `number`
+• **completion_tokens**: `number`
 
 **`Memberof`**
 
@@ -39,21 +39,21 @@ CreateCompletionResponseUsage
 
 [src/types.ts:438](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L438)
 
-___
+---
 
 ### estimated
 
-• **estimated**: ``true``
+• **estimated**: `true`
 
 #### Defined in
 
 [src/types.ts:102](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L102)
 
-___
+---
 
-### prompt\_tokens
+### prompt_tokens
 
-• **prompt\_tokens**: `number`
+• **prompt_tokens**: `number`
 
 **`Memberof`**
 
@@ -67,11 +67,11 @@ CreateCompletionResponseUsage
 
 [src/types.ts:432](https://github.com/transitive-bullshit/chatgpt-api/blob/fb06beb/src/types.ts#L432)
 
-___
+---
 
-### total\_tokens
+### total_tokens
 
-• **total\_tokens**: `number`
+• **total_tokens**: `number`
 
 **`Memberof`**
 
