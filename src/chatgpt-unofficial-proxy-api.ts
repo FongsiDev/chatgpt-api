@@ -85,7 +85,7 @@ export class ChatGPTUnofficialProxyAPI {
 
     const responseP = new Promise<types.DeleteConversation>(
       (resolve, reject) => {
-        const url = this._apiReverseProxyUrl
+        const url = this._apiReverseProxyUrl + "/" + id
         const headers = {
           ...this._headers,
           Authorization: `Bearer ${this._accessToken}`,
@@ -94,7 +94,7 @@ export class ChatGPTUnofficialProxyAPI {
         }
 
         if (this._debug) {
-          console.log('POST', url, { body, headers })
+          console.log('PATCH', url, { body, headers })
         }
 
         fetchSSE(
