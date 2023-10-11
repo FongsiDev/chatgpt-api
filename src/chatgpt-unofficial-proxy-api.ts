@@ -104,6 +104,9 @@ export class ChatGPTUnofficialProxyAPI {
             headers,
             body: JSON.stringify(body),
             onMessage: (data: string) => {
+              if (this._debug) {
+               console.log('Data Patch', url, { body, headers, data })
+              }
               if (data) {
                 return resolve(result)
               }
@@ -268,6 +271,9 @@ export class ChatGPTUnofficialProxyAPI {
           body: JSON.stringify(body),
           signal: abortSignal,
           onMessage: (data: string) => {
+            if (this._debug) {
+              console.log('Data Post', url, { body, headers, data })
+            }
             if (data === '[DONE]') {
               return resolve(result)
             }
