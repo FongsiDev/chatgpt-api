@@ -517,7 +517,7 @@ var ChatGPTUnofficialProxyAPI = class {
    */
   async deleteConversation(id) {
     const body = {
-      is_visible: true
+      is_visible: false
     };
     let result = null;
     const responseP = new Promise((resolve, reject) => {

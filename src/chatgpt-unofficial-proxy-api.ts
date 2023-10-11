@@ -76,7 +76,7 @@ export class ChatGPTUnofficialProxyAPI {
    */
   async deleteConversation(id: string): Promise<types.DeleteConversation> {
     const body: types.DeleteConversationJSONBody = {
-      is_visible: true
+      is_visible: false
     }
     let result = null
 
