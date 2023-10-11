@@ -19,7 +19,7 @@ var openai;
 })(openai || (openai = {}));
 
 // src/fetch.ts
-var fetch2 = globalThis.fetch;
+var fetch = globalThis.fetch;
 
 // src/fetch-sse.ts
 import { createParser } from "eventsource-parser";
@@ -41,9 +41,9 @@ async function* streamAsyncIterable(stream) {
 }
 
 // src/fetch-sse.ts
-async function fetchSSE(url, options, fetch3 = fetch2) {
+async function fetchSSE(url, options, fetch2 = fetch) {
   const { onMessage, onError, ...fetchOptions } = options;
-  const res = await fetch3(url, fetchOptions);
+  const res = await fetch2(url, fetchOptions);
   if (!res.ok) {
     let reason;
     try {
@@ -135,13 +135,13 @@ var ChatGPTAPI = class {
       maxResponseTokens = 1e3,
       getMessageById,
       upsertMessage,
-      fetch: fetch3 = fetch2
+      fetch: fetch2 = fetch
     } = opts;
     this._apiKey = apiKey;
     this._apiOrg = apiOrg;
     this._apiBaseUrl = apiBaseUrl;
     this._debug = !!debug;
-    this._fetch = fetch3;
+    this._fetch = fetch2;
     this._completionParams = {
       model: CHATGPT_MODEL,
       temperature: 0.8,
@@ -488,13 +488,13 @@ var ChatGPTUnofficialProxyAPI = class {
       model = "text-davinci-002-render-sha",
       debug = false,
       headers,
-      fetch: fetch3 = fetch2
+      fetch: fetch2 = fetch
     } = opts;
     this._accessToken = accessToken;
     this._apiReverseProxyUrl = apiReverseProxyUrl;
     this._debug = !!debug;
     this._model = model;
-    this._fetch = fetch3;
+    this._fetch = fetch2;
     this._headers = headers;
     if (!this._accessToken) {
       throw new Error("ChatGPT invalid accessToken");
@@ -531,7 +531,7 @@ var ChatGPTUnofficialProxyAPI = class {
       if (this._debug) {
         console.log("PATCH", url, { body, headers });
       }
-      fetch(url, {
+      this._fetch(url, {
         method: "PATCH",
         headers,
         body: JSON.stringify(body)

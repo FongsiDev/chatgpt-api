@@ -93,7 +93,7 @@ export class ChatGPTUnofficialProxyAPI {
         console.log('PATCH', url, { body, headers })
       }
 
-      fetch(url, {
+      this._fetch(url, {
         method: 'PATCH',
         headers,
         body: JSON.stringify(body)
