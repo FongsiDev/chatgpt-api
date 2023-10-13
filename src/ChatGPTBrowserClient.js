@@ -3,6 +3,7 @@ import crypto from 'crypto';
 import Keyv from 'keyv';
 import { fetchEventSource } from '@waylaidwanderer/fetch-event-source';
 import { ProxyAgent } from 'undici';
+import fetch from "node-fetch";
 
 export default class ChatGPTBrowserClient {
     constructor(
@@ -89,6 +90,7 @@ export default class ChatGPTBrowserClient {
                 let done = false;
                 await fetchEventSource(url, {
                     ...opts,
+                    fetch,
                     signal: abortController.signal,
                     async onopen(openResponse) {
                         if (openResponse.status === 200) {
