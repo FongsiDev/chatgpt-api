@@ -49,7 +49,8 @@ export default class ChatGPTBrowserClient {
             headers: {
                 'Content-Type': 'application/json',
                 Authorization: `Bearer ${this.accessToken}`,
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+                Accept: "text/event-stream",
+                //'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
                 Cookie: this.cookies || undefined,
             },
 
@@ -70,7 +71,7 @@ export default class ChatGPTBrowserClient {
                 model: this.model,
             }),
         };
-
+        
         if (this.options.proxy) {
             opts.dispatcher = new ProxyAgent(this.options.proxy);
         }
@@ -90,7 +91,7 @@ export default class ChatGPTBrowserClient {
                 let done = false;
                 await fetchEventSource(url, {
                     ...opts,
-                    fetch,
+                    ...this.options.fetch ?? fetch,
                     signal: abortController.signal,
                     async onopen(openResponse) {
                         if (openResponse.status === 200) {
