@@ -1,89 +1,69 @@
 {
-  "name": "chatgpt",
-  "version": "5.2.8",
-  "description": "Node.js client for the official ChatGPT API.",
-  "author": "Travis Fischer <travis@transitivebullsh.it>",
-  "repository": "transitive-bullshit/chatgpt-api",
-  "license": "MIT",
-  "type": "module",
-  "source": "./src/index.ts",
-  "types": "./build/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./build/index.d.ts",
-      "import": "./build/index.js",
-      "default": "./build/index.js"
-    }
-  },
-  "files": [
-    "build",
-    "bin"
-  ],
-  "bin": "./bin/cli.js",
-  "engines": {
-    "node": ">=14"
+  "name": "@waylaidwanderer/chatgpt-api",
+  "version": "1.37.3",
+  "description": "A ChatGPT implementation using the official ChatGPT model via OpenAI's API.",
+  "main": "index.js",
+  "bin": {
+    "chatgpt-api": "bin/server.js",
+    "chatgpt-cli": "bin/cli.js"
   },
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
-    "clean": "del build",
-    "prebuild": "run-s clean",
-    "predev": "run-s clean",
-    "pretest": "run-s build",
-    "docs": "typedoc",
-    "prepare": "husky install",
-    "pre-commit": "lint-staged",
-    "test": "run-p test:*",
-    "test:prettier": "prettier '**/*.{js,jsx,ts,tsx}' --check"
+    "test": "npx eslint .",
+    "start": "node bin/server.js",
+    "server": "node bin/server.js",
+    "cli": "node bin/cli.js",
+    "dev:debug:server": "nodemon --ignore cache.json --inspect=0.0.0.0:9229 bin/server.js",
+    "dev:debug:cli": "nodemon --ignore cache.json --inspect=0.0.0.0:9228 bin/cli.js"
   },
-  "dependencies": {
-    "cac": "^6.7.14",
-    "conf": "^11.0.1",
-    "eventsource-parser": "^1.0.0",
-    "js-tiktoken": "^1.0.5",
-    "keyv": "^4.5.2",
-    "p-timeout": "^6.1.1",
-    "quick-lru": "^6.1.1",
-    "read-pkg-up": "^9.1.0",
-    "uuid": "^9.0.0"
-  },
-  "devDependencies": {
-    "@keyv/redis": "^2.5.7",
-    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
-    "@types/node": "^18.16.3",
-    "@types/uuid": "^9.0.1",
-    "del-cli": "^5.0.0",
-    "dotenv-safe": "^8.2.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.2",
-    "npm-run-all": "^4.1.5",
-    "ora": "^6.3.0",
-    "prettier": "^2.8.8",
-    "tsup": "^6.7.0",
-    "tsx": "^3.12.7",
-    "typedoc": "^0.24.6",
-    "typedoc-plugin-markdown": "^3.15.3",
-    "typescript": "^5.0.4"
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "prettier --write"
-    ]
+  "author": "waylaidwanderer",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waylaidwanderer/node-chatgpt-api.git"
   },
   "keywords": [
+    "api",
+    "cli",
+    "bing",
+    "api-server",
     "openai",
-    "chatgpt",
-    "chat",
+    "api-rest",
     "gpt",
+    "bing-api",
+    "bing-search",
     "gpt-3",
-    "gpt3",
-    "gpt4",
-    "chatbot",
-    "machine learning",
-    "conversation",
-    "conversational ai",
-    "ai",
-    "ml",
-    "bot"
-  ]
+    "openai-api",
+    "gpt-4",
+    "chatgpt",
+    "chatgpt-api",
+    "bing-chat"
+  ],
+  "dependencies": {
+    "@dqbd/tiktoken": "^1.0.2",
+    "@fastify/cors": "^8.2.0",
+    "@timefox/bic-sydney": "^1.1.2",
+    "@waylaidwanderer/fastify-sse-v2": "^3.1.0",
+    "@waylaidwanderer/fetch-event-source": "^3.0.1",
+    "boxen": "^7.0.1",
+    "clipboardy": "^3.0.0",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.11.0",
+    "fetch-undici": "^3.0.1",
+    "https-proxy-agent": "^7.0.0",
+    "inquirer": "^9.1.4",
+    "inquirer-autocomplete-prompt": "^3.0.0",
+    "keyv": "^4.5.2",
+    "keyv-file": "^0.2.0",
+    "ora": "^7.0.1",
+    "undici": "^5.20.0",
+    "ws": "^8.12.0"
+  },
+  "devDependencies": {
+    "@keyv/redis": "^2.5.6",
+    "eslint": "^8.35.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "nodemon": "^3.0.1"
+  }
 }
