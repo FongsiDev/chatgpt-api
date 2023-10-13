@@ -1,5 +1,5 @@
 {
-  "name": "@waylaidwanderer/chatgpt-api",
+  "name": "chatgpt-api",
   "version": "1.37.3",
   "description": "A ChatGPT implementation using the official ChatGPT model via OpenAI's API.",
   "main": "index.js",
